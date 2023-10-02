@@ -25,7 +25,7 @@ val effect: ZIO[DatabaseConnection, IOException, String] = ???
 // A layer that produces DatabaseConnection service
 val dbConnection: ZLayer[Any, IOException, DatabaseConnection] = ???
 
-// After applying dbConnection to our environmental effect the reurned
+// After applying dbConnection to our environmental effect the returned
 // effect has no dependency on the DatabaseConnection
 val eliminated: ZIO[Any, IOException, String] = 
   dbConnection { // Provides DatabaseConnection context
